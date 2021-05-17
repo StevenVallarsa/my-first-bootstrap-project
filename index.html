@@ -6,22 +6,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Bootstrap CSS -->
+  <!-- build:css css/main.css -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- endbuild -->
 
   <!-- Additional CSS must be placed after Bootstrap CSS -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Added in Icon, Fonts, Buttons and Forms section-->
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
 
   <title>NuCamp: A Better Way To Camp</title>
 </head>
 
 <body>
-
   <header class="jumbotron jumbotron-fluid">
     <div class="container">
       <div class="row">
@@ -50,7 +48,7 @@
         <div class="modal-body">
           <div class="container-fluid">
 
-            <form action="">
+            <form>
               <div class="row form-group">
                 <label class="col col-12 col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
                 <div class="col">
@@ -68,12 +66,12 @@
               <div class="row form-group">
                 <label class="col col-12 col-sm-6 col-form-label" for="date">Date</label>
                 <div class="col col-sm-6">
-                  <input class="form-control" type="date" id="date" name="date" placeholder="date">
+                  <input class="form-control" type="date" id="date" name="date">
                 </div>
               </div>
               <div class="form-group row">
-                <label class="col col-sm-6 col-form-label" for="">Campsite Type</label>
-                <div class="col col-2 btn btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="col col-12 col-sm-6 col-form-label" for="radioButtons">Campsite Type</label>
+                <div class="col col-2 btn btn-group btn-group-toggle" data-toggle="buttons" id="radioButtons">
                   <div class="btn-group btn-group-toggle" data-toggle="buttons">
                     <label class="btn btn-success">
                       <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked>Tent
@@ -85,8 +83,9 @@
                 </div>
               </div>
               <div class="row form-group">
-                <div class="col col-12">
-                  <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <div class="col col-12 col-sm-6">
+                  <!-- Added -2px margin to the cancel button to line it up with the tent button above it at xs and sm sizes -->
+                  <button style="margin-left: -2px;" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                   <button class="btn btn-primary" type="submit">Search</button>
                 </div>
               </div>
@@ -100,7 +99,7 @@
 
   <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href"#"><img src="img/logo.png" height-"30px" width="30px" alt="NuCamp Logo"></a>
+      <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" alt="NuCamp Logo"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
         <span class="navbar-toggler-icon"> </span>
       </button>
@@ -130,7 +129,7 @@
         </div>
         <div class="modal-body">
           <div class="container-fluid">
-            <form action="">
+            <form>
               <div class="form-row">
                 <div class="form-group col-12">
                   <label class="sr-only" for="loginEmail">Email Address</label>
@@ -138,7 +137,7 @@
                 </div>
                 <div class="form-group col-12">
                   <label for="loginPassword" class="sr-only">Password</label>
-                  <input type="password" class="form-control form-control-sm" id="loginEmail" placeholder="Password">
+                  <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
                 </div>
               </div>
               <div class="form-check">
@@ -287,12 +286,12 @@
   </footer>
 
   <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <!-- build:js js/main.js -->
   <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-  <script src="js/scripts.js">
-  </script>
+  <script src="js/scripts.js"></script>
+  <!-- endbuild -->
 
 </body>
 
