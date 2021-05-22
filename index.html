@@ -19,8 +19,9 @@
   <title>NuCamp: A Better Way To Camp</title>
 </head>
 
-<!-- JUMBOTRON / HEADER -->
+
 <body>
+  <!-- JUMBOTRON / HEADER -->
   <header class="jumbotron jumbotron-fluid">
     <div class="container">
       <div class="row">
@@ -31,9 +32,9 @@
           <h1>NuCamp</h1>
           <h2>a better way to camp</h2>
         </div>
-        <div class="col col-12 col-md-4 col-xl-2 mt-4">
-          <a class="btn btn-info btn-lg text-nowrap" role="button" data-toggle="modal"
-            data-target="#reserveModal">Reserve Campsite</a>
+        <!-- Changed 'col-xl-2' to 'col-xl-3' so the reservation button didn't get pushed so close to the right edge of window -->
+        <div class="col col-md-4 col-xl-3 mt-4">
+          <a class="btn btn-info btn-lg text-nowrap" role="button" id="reserveButton">Reserve Campsite</a>
         </div>
       </div>
     </div>
@@ -43,7 +44,7 @@
   <div id="reserveModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
-        <div class="modal-header bg-info text-white">
+        <div class="modal-header">
           <h3 class="modal-title">Reserve a Campsite</h3>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
@@ -115,7 +116,7 @@
               Contact</a></li>
         </ul>
         <span class="navbar-text ml-auto">
-          <a role="button" data-toggle="modal" data-target="#loginModal" href="">
+          <a role="button" id="loginButton" href="#">
             <i class="fa fa-sign-in"></i> Login
           </a>
         </span>
@@ -164,7 +165,7 @@
     <div class="row row-content">
       <div class="col col-md-8 mx-auto px-0">
 
-        <!-- CAROUSELE -->
+        <!-- CAROUSEL -->
         <div id="homeCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
